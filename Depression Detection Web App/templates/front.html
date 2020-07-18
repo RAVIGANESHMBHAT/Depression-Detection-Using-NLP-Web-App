@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Depression Test Page</title>    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+    <script>
+        $(function(){
+            var textArea = $('#content'),
+            hiddenDiv = $(document.createElement('div')),
+            content = null;
+            
+            textArea.addClass('noscroll');
+            hiddenDiv.addClass('hiddendiv');
+            
+            $(textArea).after(hiddenDiv);
+            
+            textArea.on('keyup', function(){
+                content = $(this).val();
+                content = content.replace(/\n/g, '<br>');
+                hiddenDiv.html(content + '<br class="lbr">');
+                $(this).css('height', hiddenDiv.height());
+            });
+        });    
+    </script>
+    
+    <script>
+        function input(){       
+            if(document.getElementById("mySelect").value!=""){
+                document.forms.form2.depress.value = "Recognizing...";
+            }
+            
+        }
+    </script>
+    
+    <script>
+        if (document.getElementById('mySelect').value!=""){
+            var bleep=new Audio();
+            bleep.src="static/music/Concentration  Programming Music ( 128kbps ) (mp3cut.net).mp3"
+        }
+    </script>
+    
+    <script>
+        document.getElementById('mySelect1').value=document.getElementById('content').value;
+    </script>
+
+    <style>
+        ::placeholder {
+          color: #656A6D;
+        }
+        
+        textarea{
+              background: rgb(254,255,255);
+              border-radius:4px;
+              width: 400px;
+              min-height: 150px;
+              font-family:Comic Sans, Comic Sans MS, cursive;
+              font-size: 18px;
+              color: #000000;
+              padding: 5px;
+              text-shadow : 1px 1px 1px rgba(0,0,0,0.3);
+        }
+        .noscroll{
+          resize: none;
+        }
+        .hiddendiv{
+          display: none;
+          white-space: pre-wrap;
+          width: 500px;
+          min-height: 50px;
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+          padding: 5px;
+          word-wrap: break-word;
+        }
+        .lbr {
+          line-height: 3px;
+        }  
+        
+        
+        .btn-group button {
+        background-color: #0080ff; /* Green background */
+        /* border: 0px solid #58B5D1;  Green border */
+        border: none;
+        outline:none;
+        width:133px;
+        height:40px;
+        color: white; /* White text */
+        padding: 10px 24px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        float: left; /* Float the buttons side by side */
+      }
+
+      /* Clear floats (clearfix hack) */
+      .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .btn-group button:not(:last-child) {
+        border-right: none; /* Prevent double borders */
+      }
+
+      /* Add a background color on hover */
+      .btn-group button:hover {
+        background-color: #0080ff;
+      }
+        
+         
+    </style>
+ 
+</head>
+
+<body >
+    <div style="background-color:#006989;">
+        <h2 style = "font-family:georgia,garamond,serif;font-size:25px;font-style:italic;">"The best and most beautiful things in the world cannot be seen or even touched. They must be felt  with the heart."</h2>
+        <h3 style="padding-left:950px">― Helen Keller</h3>
+    </div>
+    
+    <hr>
+    
+    <h1 style="padding-left:80px;">Predict Depression</h1>
+    
+    <div style="padding-left:575px;padding-top:39px;">
+        <form action="{{ url_for('speech2text')}}" method="post">
+            <select id="mySelect" name="abc" style="background:#092750;color:white;height:25px;border:none;" required>
+                <option  value="">Language</option> 
+                <option  value="en-IN">English</option>
+                <option  value="hi-IN">Hindi</option>
+                <option  value="kn-IN">Kannada</option>
+                <option  value="ml-IN">Malayalam</option>
+                <option  value="ta-IN">Tamil</option>
+                <option  value="te-IN">Telugu</option>
+                
+             </select>
+             
+             <br>
+             <br>
+             
+             <button  onmousedown="bleep.play()"  type="submit" onclick=input()><input type="image" src="static/images/speech.jpeg" style="width:30px;height:35px;"  /></button><br>
+             <textarea id="content" name="abcd" style="width:1px;height:1px;visibility:hidden;">{{converted_text}}</textarea>
+         </form>
+     </div> 
+
+     <div class="login" style="padding-top:200px">	
+        <form action="{{ url_for('predict')}}" method="post" name="form2">
+             <textarea id="content" name="depress" placeholder="Status to evaluate" onClick="this.setSelectionRange(0, this.value.length)" style="resize:none;" required >{{converted_text}}</textarea> <!--onClick="this.setSelectionRange(0, this.value.length)"-->
+             
+             <div class="btn-group">
+                <button type="submit" value="positive" name="positive" style="border-radius:10px 0px 0px 10px;"></button>
+                <button type="submit" value="actual" name="actual">Predict</button>
+                <button type="submit" value="negative" style="border-radius:0px 10px 10px 0px;"></button>
+              </div>
+              <div class="show"></div> 
+        </form>
+        
+        <br>
+        <br>
+        
+        <a style="color:#fde50d;padding-left:10px;text-decoration:none;" href="{{url_for('home1')}}">Click here to predict depression from Images</a>  
+     </div>
+
+     <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white" style="color:white;font-size:12px;padding-left:890px;padding-top:20px">Copyright © 2020 Depression Detect - All rights reserved</p>
+        </div>
+     </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<html>
+<head>
+	<title>Depression Page</title>
+	<style>
+		body{
+			padding-left:60px;
+			padding-right:60px;
+		}
+		.container1 {
+    		display: flex;
+		}
+		.card {
+  			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  			transition: 0.3s;
+			width:350px;
+			  
+		}
+		.card:hover {
+  			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+		.container {
+  			padding: 2px 16px;
+		}
+
+	</style>
+</head>
+<body>
+	<div >
+		<h1 style="font-family:Comic Sans, Comic Sans MS, cursive;color:#0080ff;font-size:40px;">Depression Solutions Guide</h1>
+		<h3 style="color:#808080;">Your trusted guide for depression.</h3>
+	</div>
+	<hr style="border: none;height: 30px;background:#1080ff;"/>
+	<div class="container1">
+		<div style="width:50%;">
+			<h1>Depression</h1>
+			<p style="font-size:20px;">Depression is more than just feeling sad. It drains your optimism, energy, and drive. It can seem like 
+			there’s no way out. But no matter how bad you feel, there’s always hope. Read on to learn about symptoms, 
+			treatment, and recovery.</p>
+		</div>
+		<div>
+			<img src="static/images/elephant.jpg" alt="Not found" style="padding-left:50px;"/>
+		</div>
+	</div>
+	<hr style="height: 5px;background:#c0c0c0; margin-bottom:35px;"/>
+	<div class="container1">
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none;" href="{{ url_for('ind1') }}">
+				<img src="static/images/d1.jpg" alt="Avatar" style="width:350px">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Depression Symptoms and Warnings</b></h3>
+					<p style="color:black;">Recognizing depression and getting the help you need</p>
+				</div>
+			</a>
+		</div>
+		</div>
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none" href="{{ url_for('ind2') }}">
+				<img src="static/images/d2.jpg" alt="Avatar" style="width:350px">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Coping with Depression</b></h3>
+					<p style="color:black;">Tips for overcoming depression one step at a time</p>
+				</div>
+			</a>
+		</div>
+		</div>
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none" href="{{ url_for('ind3') }}">
+				<img src="static/images/d3.jpg" alt="Avatar" style="width:350px">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Depression Treatment</b></h3>
+					<p style="color:black;">Therapy, medication and lifestyle changes that can help you feel better</p>
+				</div>
+			</a>
+		</div>
+		</div>
+	</div>
+	
+	<div class="container1" style="padding-top:50px;">
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none;" href="{{ url_for('ind4') }}">
+				<img src="static/images/d4.jpg" alt="Avatar" style="width:350px;">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Depression in Men</b></h3>
+					<p style="color:black;">What it looks like and how to get help</p>
+					<br>
+				</div>
+			</a>
+		</div>
+		</div>
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none" href="{{ url_for('ind5') }}">
+				<img src="static/images/d5.jpg" alt="Avatar" style="width:350px">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Depression in Older Women</b></h3>
+					<p style="color:black;">Recognizing the signs and getting the right treatment</p>
+				</div>
+			</a>
+		</div>
+		</div>
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none" href="{{ url_for('ind6') }}">
+				<img src="static/images/d6.jpg" alt="Avatar" style="width:350px">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Depression in Women</b></h3>
+					<p style="color:black;">Signs, symptoms, and causes of female depression and what to do</p>
+				</div>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div class="container1" style="padding-top:50px;">
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none;" href="{{ url_for('ind7') }}">
+				<img src="static/images/d10.jpg" alt="Avatar" style="width:350px;">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Are you feeling suicidal?</b></h3>
+					<p style="color:black;">How to deal with suicidal thoughts and feelings</p>
+					<br>
+				</div>
+			</a>
+		</div>
+		</div>
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none" href="{{ url_for('ind8') }}">
+				<img src="static/images/d11.jpg" alt="Avatar" style="width:350px">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Social Media and Mental Health</b></h3>
+					<p style="color:black;">Here’s how to modify your habits and improve your mood.</p>
+				</div>
+			</a>
+		</div>
+		</div>
+		<div style="width:40%;">
+		<div class="card">
+			<a style="text-decoration:none" href="{{ url_for('ind9') }}">
+				<img src="static/images/d12.jpg" alt="Avatar" style="width:350px">
+				<div class="container">
+					<h3 style="color:#0080ff;"><b>Relaxation Techniques for Stress Relief</b></h3>
+					<p style="color:black;">To effectively combat stress, you need to activate your body’s natural relaxation response.</p>
+				</div>
+			</a>
+		</div>
+		</div>
+	</div>
+	
+	<footer>
+         <div style="background:#99ccff;height:60px;width:96%;">
+             <p style="padding-left:790px;padding-top:20px;">Copyright © 2020 Depression Detect - All rights reserved</p>
+         </div>
+    </footer>
+	
+</body>
+</html>

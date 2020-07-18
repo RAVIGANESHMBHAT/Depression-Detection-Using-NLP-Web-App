@@ -1,0 +1,998 @@
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/game-guides-e45be.appspot.com/o/Images%2FDo%20not%20delete%2Fpassword.jpeg?alt=media&token=ac12bec4-47bf-4995-ad4c-cb488b65cab6">
+  <link rel="icon" href="data:image/jpeg;base64,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" style="width: 180px;height:55px; margin-top: 3px;"></a>
+
+  <!-- for the social media icon -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<title>Depression Forum</title>
+  
+
+  <style>
+  .categoryDiv{
+    background: #E7E3E3; 
+    border-radius:15px;
+    color:white;
+    text-align:center;
+
+    margin: 0 auto;
+    z-index:10; 
+    width:100%;
+    left:0;
+    right:0;
+ }
+
+  *{
+    margin:0;
+    padding:0;
+  }
+  html,body{
+    height:100%;
+  }
+  .container {
+       min-height:100%;
+      margin: 0 auto;
+      max-width: 1280px;
+      width: 90%;
+   }
+   #footer{
+     position:relative;
+     height:400px;
+   }
+  @media only screen and (min-width: 601px) {
+    .container {
+       width: 70%;
+    }
+ }
+ @media only screen and (min-width: 993px) {
+  .container {
+    width: 50%;
+  }
+}
+
+     #socialMedia{
+       padding-left:5px;
+       color:white;
+     }
+     #socialMedia:hover{
+       padding-left:5px;
+       color:#9B0A0A;
+       cursor:pointer;
+       font-size:18px;
+     }
+
+     #modal-create, #modal-account, #modal-signup, #modal-login, #modal-resetPassword, #modal-logout{
+       border:2px solid #B7B7B7;
+       border-radius:70px;
+       outline: none;
+     }
+
+   
+}
+
+
+
+  </style>
+ 
+  
+</head>
+<body>
+
+  <!-- NAVBAR --> 
+<div class="navbar-fixed ">
+    <nav class="nav-wrapper indigo">
+      <div class="container">
+        <a href="#" class="brand-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCQMGHZFfyZShBAh_Ky27cdK6FimVDAHTqtttUDZ83gX0Ap243&usqp=CAU" style="width: 180px;height:55px; margin-top: 3px;"></a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-links1">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li class="logged-in" style="display:none;">
+            <a href="#" class="modal-trigger" data-target="modal-account">Account Info</a>
+          </li>
+          <li class="logged-in" style="display:none;">
+            <a href="#" class="modal-trigger" data-target="modal-logout" >Logout</a>
+          </li>
+          <li class="logged-out" style="display:none;">
+            <a href="#" class="modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out" style="display:none;">
+            <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="sidenav sidenav-close" id="mobile-links1">
+         <li class="logged-in" style="display:none;">
+           <div class="user-view">
+             <div class="background">
+                <img src="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+             </div>
+             <a href="#user"><img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png"></a>
+             <a href="#name"><span class="white-text name" ></span></a>
+             <a href="#email"><span class="white-text email"></span></a>
+          </div>
+
+          <li class="logged-out" style="display:none;">
+           <div class="user-view">
+             <div class="background">
+                <img src="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+             </div>
+             <a href="#user"><img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png"></a>
+             <a href="#"><span class="white-text name" >Login to view the user info.</span> </a>
+          </div>
+
+            <!--<a href="#" class="modal-trigger" data-target="modal-account">Account Info</a>   -->
+         </li>
+          <li class="logged-in" style="display:none;">
+            <a href="#" class="modal-trigger" data-target="modal-logout" ><i class="material-icons">exit_to_app</i>Logout</a>
+          </li>
+          <li class="logged-out" style="display:none;">
+            <a href="#" class="modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out" style="display:none;">
+            <a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+    
+  </ul>
+
+
+  <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="text" id="signup-bio" required />
+          <label for="signup-bio">Name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+       
+        <!--<a href='#' onclick="forgotPass();">Forgot Password?</a>-->
+        <p class="error pink-text center-align"></p>
+      </form>
+      <a href="#" class="modal-trigger" data-target="modal-resetPassword" id="forgotLink">Forgot password?</a>
+    </div>
+  </div>
+
+ <!-- ADD IMAGE MODAL -->
+  <div id="modal-addItem" class="modal" style="max-height: 90% ;">
+    <div class="modal-content">
+    <h4>Keep on spreading good positive vibes</h4>
+
+    <div class="file-field input-field">
+      <div class="btn" style="border-radius:45px;">
+        <span>Choose photo</span>
+        <input type="file" id="photo" required onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" id="fileName" type="text">
+      </div>
+    </div>                  
+
+    <input type="text" id="postText" placeholder="Say something about this photo..."> 
+
+<div class="input-field col s12" style="padding-bottom:30px;" id="categoryDiv">
+    <select class="categoryList11" id="categoryList11" >
+      <option value="" disabled selected>Category of depression to which this post is the solution (eg: Negative thinking)</option>
+      <option value="add_new_category_to_the_list" >+ New Category</option>
+    </select>
+  </div> 
+
+<input type="text" id="categoryAsInput" placeholder="Category of depression to which this post is the solution (eg: Negative thinking)" style="display:none;">
+      
+
+    <center><img id="output" style="max-width: 100%;height: auto;width: auto\9;padding-bottom:10px;"></center>
+
+    <center><button class="btn blue uploadBtn"  onclick="uploadImage()">Upload</button></center><br>
+    <div id="errors"></div>
+
+  <div class="progress loader" style="display:none;">
+      <div class="indeterminate"></div>
+  </div>
+
+    
+    </div>
+
+    
+  </div>
+
+  <!-- PASSWORD RESET MODAL -->
+  <div id="modal-resetPassword" class="modal">
+    <div class="modal-content">
+      <h4>Reset Password</h4><br />
+      <form id="reset-password">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0" >Reset</button>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+           <div class="user-view">
+             <a href="#user"><img class="circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png"></a>
+          </div>
+            <!--<a href="#" class="modal-trigger" data-target="modal-account">Account Info</a>   -->
+        <div class="account-details"></div> 
+    </div>
+  </div>
+
+  <!--LOGOUT CONFIRMATION BOX-->
+  <div id="modal-logout" class="modal">
+    <div class="modal-content">
+      <h4>Logout</h4>
+      <p>Do you want to logout?</p>
+    </div>
+    <div class="modal-footer">
+            <a href="#" onclick="logouts();" class="modal-action modal-close waves-effect waves-green btn-flat ">Yes</a>
+            <a href="#" class="modal-action modal-close waves-effect waves-red btn-flat ">No</a>
+   </div>
+  </div>
+  
+  <!-- GUIDE LIST -->
+  <div class="container"  style="margin-top: 40px;">
+     
+  
+    <div class="row logged-in">
+
+     <!-- <a href="#" data-target="modal-addItem"  class="col btn-floating btn-large waves-effect waves-light green modal-trigger" style="float:right;"><i class="material-icons">add</i></a>  -->
+
+      <div class="fixed-action-btn">
+         <a href="#" data-target="modal-addItem" class="btn-floating btn-large waves-effect waves-light green modal-trigger ">
+             <i class="large material-icons">add</i>
+       </a>
+    </div>
+
+    <div class="input-field col s12 categoryDiv" style="position:sticky;top:60px;" id="categoryDiv">
+    <select class="categoryList" id="categoryList"  onchange='showImages(this.value);' >
+      <option value="" disabled selected>Filter by category of depression</option>
+      <option value="">Show All</option>
+    </select>
+  </div> 
+  <div style="padding-top:50px;">
+     <br>
+       <center> <p id="catNames" style="font-size:30px;font-weight:bold;font-family: Impact, Charcoal, sans-serif;"></p></center>
+     <br>
+  </div>
+
+     <div class="preloader-wrapper small active" id="loadingCircle" style="display:none;position:fixed;top:50%;left:45%;">
+    <div class="spinner-layer spinner-green-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+   <p id="nothingToShow" style="display:none;color:red;">Nothing is there to show.</p>
+    <ul class="col collapsible z-depth-0 guides" style="border: none;">
+     
+
+    </ul>
+  </div>
+  </div>
+  
+
+  
+
+
+  
+ 
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+      apiKey: "AIzaSyA8nb3s4OJfzzXHYH_QUuSUS8dTI5sX2_I",
+      authDomain: "abcd-490c8.firebaseapp.com",
+      databaseURL: "https://abcd-490c8.firebaseio.com",
+      projectId: "abcd-490c8",
+      storageBucket: "abcd-490c8.appspot.com",
+      messagingSenderId: "1002235938364",
+      appId: "1:1002235938364:web:7f7c93ea8f4661d2c76539",
+      measurementId: "G-ZPC1HYZY2P"
+    };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    
+    // update firestore settings
+    //db.settings({ timestampsInSnapshots: true });
+
+ 
+
+</script>
+ 
+  
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+  <script>
+  
+    $(document).ready(function(){
+      $('.sidenav').sidenav();  //to show the nav bar when window is resized.
+      $('.fixed-action-btn').floatingActionButton();
+      $('.dropdown-trigger').dropdown();
+      $('.fixed-action-btn').floatingActionButton();
+     $('.slider').slider(); //to setup the sliding images once after the user is logged in
+      $('.tooltipped').tooltip();
+       $('#forgotLink').click(function(e){
+        e.preventDefault();
+        $('#modal-login').modal({
+          dismissible: true
+        });
+        $('#modal-resetPassword').modal('open');
+      });     
+      $('select').formSelect();
+
+    $('#photo').change(function(e) {
+      document.getElementById('errors').style.display = "none";
+    });
+    $('#categoryList11').change(function(e){
+      var selectedVal = $('#categoryList11 option:selected').val();
+      if(selectedVal == "add_new_category_to_the_list"){
+        $("#categoryAsInput").show();
+      }
+      else{
+        $("#categoryAsInput").hide();
+      }
+    })
+
+    });
+
+    /*$('.closeSearchList').click(function(){ // to hide the 'Close' button of searchList when clicked
+      $(this).hide();  
+    })*/
+  </script>
+
+  <script>
+
+       // listen for auth status changes
+auth.onAuthStateChanged(user => {
+  console.log("state change");
+  window.userIs=user;
+    if (user) { //authorised user, but not confirmed the email
+         selectValues={};
+            storageRef.child('/Depression forum/').listAll().then(function(result){
+        result.prefixes.forEach(function(imageRef){
+          //console.log(imageRef.name);
+          selectValues[imageRef.name] = imageRef.name;
+         });
+
+    $.each(selectValues, function(key, value) {
+     if(key != window.userIs.email){ 
+     $('#categoryList1')
+          .append($('<option>', { value : key })
+          .text(value));
+          $('select').formSelect();
+     }
+     });
+
+      });   
+    //console.log(user);
+       setupUI(user); 
+        //showCategoryList();
+        showImages("");    
+      
+    } else {
+        setupUI();
+    }
+
+    
+
+  });
+
+
+// signup
+const signupForm = document.querySelector('#signup-form');
+signupForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  // get user info
+  const email = signupForm['signup-email'].value;
+  const password = signupForm['signup-password'].value;
+  
+
+  // sign up the user
+  auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    return db.collection('users').doc(cred.user.uid).set({
+        bio: signupForm['signup-bio'].value
+      });
+    }).then(() => {
+    // close the signup modal & reset form
+    const modal = document.querySelector('#modal-signup');
+    M.Modal.getInstance(modal).close();
+    signupForm.reset();
+    signupForm.querySelector('.error').innerHTML = '';
+    location.reload();
+  }).catch(err => {
+    signupForm.querySelector('.error').innerHTML = err.message;
+  });
+  
+});
+
+// login
+const loginForm = document.querySelector('#login-form');
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  // get user info
+  const email = loginForm['login-email'].value;
+  console.log(email);
+  const password = loginForm['login-password'].value;
+
+  // log the user in
+  auth.signInWithEmailAndPassword(email, password).then((cred) => {
+    console.log(cred.user);
+    // close the signup modal & reset form
+    const modal = document.querySelector('#modal-login');
+    M.Modal.getInstance(modal).close();
+    loginForm.reset();
+    loginForm.querySelector('.error').innerHTML = '';
+  }).catch(err => {
+    loginForm.querySelector('.error').innerHTML = err.message;
+  });
+
+});
+
+// PASSWORD RESET 
+const resetPassForm = document.querySelector('#reset-password');
+resetPassForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  
+  // get user info
+  var auth = firebase.auth();
+  var user = firebase.auth().currentUser;
+  var emailAddress = resetPassForm['login-email'].value;
+
+  auth.sendPasswordResetEmail(emailAddress).then(function() {
+    // Email sent.
+      alert("Password reset email is sent to "+emailAddress);
+    const modal = document.querySelector('#modal-resetPassword');
+     M.Modal.getInstance(modal).close();
+     resetPassForm.reset();
+  }).catch(function(error) {
+      // An error happened.
+      alert("Error in sending the password reset email to "+emailAddress);
+  });
+});
+
+</script>
+
+<script>
+      // DOM elements
+const loggedOutLinks = document.querySelectorAll('.logged-out');
+const loggedInLinks = document.querySelectorAll('.logged-in');
+const accountDetails = document.querySelector('.account-details');
+
+
+const setupUI = (user) => {
+    if (user) {
+      console.log(user.email)
+        // account info
+        db.collection('users').doc(user.uid).get().then(doc => {
+          window.userNameIs = doc.data().bio;
+          const html = `
+            <div style="color:darkblue;">${doc.data().bio}</div>
+            <div style="color:darkblue;">${user.email}</div>
+          `;
+          accountDetails.innerHTML = html;
+          document.querySelector('.name').innerHTML = doc.data().bio;
+          document.querySelector('.email').innerHTML = user.email;
+        });
+        // toggle user UI elements
+        loggedInLinks.forEach(item => item.style.display = 'block');
+        loggedOutLinks.forEach(item => item.style.display = 'none');
+      } else {
+      // clear account info
+    accountDetails.innerHTML = '';
+    // toggle user elements
+    loggedInLinks.forEach(item => item.style.display = 'none');
+    loggedOutLinks.forEach(item => item.style.display = 'block');
+  }
+};
+
+// setup materialize components
+document.addEventListener('DOMContentLoaded', function() {
+
+    var modals = document.querySelectorAll('.modal');
+    M.Modal.init(modals);
+  
+    var items = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(items);
+  
+  });
+
+</script>
+
+ <script>
+ 
+  const guideList = document.querySelector('.guides');
+  var storageRef = firebase.storage().ref();
+
+
+    function uploadImage() {
+       
+
+      document.getElementById('errors').innerHTML = "";
+      var categorys = document.getElementById('categoryList11').value;
+      if(categorys==''){
+        categorys = window.userIs.email;
+      }
+      if(categorys == "add_new_category_to_the_list"){
+        categorys = document.getElementById('categoryAsInput').value;
+      }
+      const ref = firebase.storage().ref('/Depression forum/'+categorys);
+      var post = document.getElementById('postText').value;
+      if(post== null || post==''){
+          post=' ';
+        }
+      try{  
+        const file = document.querySelector("#photo").files[0];
+        const name = +new Date() + "-" + file.name;
+        const date = new Date().toString().slice(0,24);
+
+        document.querySelector('.loader').style.display ="block";
+        document.querySelector('.uploadBtn').innerHTML = "Uploading...";
+        document.querySelector('.uploadBtn').disabled = true;
+        console.log("Image is uploading..."); 
+        
+        db.collection("/Depression forum posts/").doc(name).set({
+          name : window.userNameIs,
+          email : window.userIs.email,
+          content: post,
+          date : date
+        });
+
+        const metadata = {
+          contentType: file.type
+        };
+        const task = ref.child(name).put(file, metadata);
+        task
+          .then(snapshot => snapshot.ref.getDownloadURL())
+          .then(url => {
+            //console.log(url);
+            //alert("Uploaded successfully");
+            const modal = document.querySelector('#modal-addItem');
+            document.getElementById('postText').value='';
+                 document.getElementById('categoryList11').value = '';
+            document.getElementById('categoryAsInput').value = "";
+            document.getElementById('categoryAsInput').style.display = "none";
+            document.getElementById('output').src = '';
+            document.getElementById('photo').value='';
+            document.getElementById('fileName').value = '';
+            document.querySelector('.loader').style.display ="none";
+            document.querySelector('.uploadBtn').innerHTML = "Upload";
+            document.querySelector('.uploadBtn').disabled = false;
+            M.Modal.getInstance(modal).close();
+
+           
+
+            showImages("");
+          })
+          .catch(console.error);   
+      }
+      catch{
+        var error = document.querySelector('#errors');
+        error.setAttribute('style', 'color:red;');
+        error.innerHTML = "Fill the appropriate fields";
+        console.log("file empty");
+      }
+      
+     } 
+     
+   
+     
+  selectValues={};
+
+      
+    function showImages(category){
+      var count=0, c=0;
+      document.getElementById('catNames').innerHTML = category;
+      document.getElementById('loadingCircle').style.display = "block";
+      document.getElementById('nothingToShow').style.display="none";
+          guideList.innerHTML = '';
+            var i=0;
+            if(category==""){
+              storageRef.child('/Depression forum/').listAll().then(function(result){
+                if(result.prefixes.length==0){
+                    document.getElementById('loadingCircle').style.display = "none";
+                    document.getElementById('nothingToShow').style.display="block";
+                }
+                result.prefixes.forEach(function(imageRef){
+                   storageRef.child('/Depression forum/'+imageRef.name+'/').listAll().then(function(result){
+                     count+=result.items.length;
+                      if(count==0){
+                        document.getElementById('loadingCircle').style.display = "none";
+                      document.getElementById('nothingToShow').style.display="block";
+                      }
+                      result.items.forEach(function(imageRef){
+                        //console.log("Img ref= "+imageRef.toString());
+                        i++;
+                        displayImage(i, imageRef);
+                       });
+                    });
+
+                });
+                
+              });
+            }
+             else{
+               storageRef.child('/Depression forum/'+category+'/').listAll().then(function(result){
+                 if(result.items.length == 0){
+                      document.getElementById('loadingCircle').style.display = "none";
+                      document.getElementById('nothingToShow').style.display="block";
+                 }
+                 else{
+                     result.items.forEach(function(imageRef){
+                    //console.log("Img ref= "+imageRef.toString());
+                    i++;
+                    displayImage(i, imageRef);
+                    
+                });
+                 }
+                
+               
+            });
+             }
+
+      clearDropdown();
+  
+    }
+    function clearDropdown(){
+          selectValues={};
+            document.getElementById('categoryList11').options.length=2;
+            document.getElementById('categoryList').options.length=2;
+            storageRef.child('/Depression forum/').listAll().then(function(result){
+        result.prefixes.forEach(function(imageRef){
+          //console.log(imageRef.name);
+          selectValues[imageRef.name] = imageRef.name;
+         });
+        $.each(selectValues, function(key, value) {
+          if(key != window.userIs.email){
+           $('#categoryList')
+          .append($('<option>', { value : key })
+          .text(value));
+          $('select').formSelect();
+      }
+
+     });
+
+    $.each(selectValues, function(key, value) {
+          if(key != window.userIs.email){
+           $('#categoryList11')
+          .append($('<option>', { value : key })
+          .text(value));
+          $('select').formSelect();
+      }
+
+     });
+
+      }); 
+    }
+    
+
+    function displayImage(row, images){
+      document.getElementById('loadingCircle').style.display = "none";
+      document.getElementById('nothingToShow').style.display="none";
+        images.getDownloadURL().then(function(url){
+          let li = document.createElement('div');
+          let editTools = document.createElement('div');
+          let userProfile = document.createElement('img');
+          let userName = document.createElement('div');
+          let caption = document.createElement('div');
+          let dates = document.createElement('div');
+          let image =  document.createElement('img');
+
+          let editContent = document.createElement('div');
+          editContent.setAttribute('style', 'cursor:pointer;width:20px;color:black;float:right;margin-right:15px;');
+          editContent.setAttribute('align', 'center');
+          editContent.textContent = '';
+          let editIcon = document.createElement('i');
+          editIcon.setAttribute('class',"material-icons");
+          editIcon.textContent = "edit";
+
+          let cross = document.createElement('div');
+          cross.setAttribute('style', 'cursor:pointer;width:20px;color:red;border-radius:10px;float:right;margin-right:15px;');
+          cross.setAttribute('align', 'center');
+          cross.textContent = '';
+          let deleteIcon = document.createElement('i');
+          deleteIcon.setAttribute('class',"material-icons");
+          deleteIcon.textContent = "delete_forever";
+
+          let share = document.createElement('button');
+          share.setAttribute('style', 'background-color:#F4F5F9;color:green;height:25px;float:right;marign:right:15px;border:none;cursor:pointer;')
+          let shareIcon = document.createElement('i');
+          shareIcon.setAttribute('class',"material-icons");
+          shareIcon.textContent = "share";
+
+          let copyLink = document.createElement('button');
+          copyLink.setAttribute('style', 'background-color:#F4F5F9;color:green;height:25px;float:right;marign:right:15px;border:none;cursor:pointer;')
+          let linkIcon = document.createElement('i');
+          linkIcon.setAttribute('class',"material-icons");
+          linkIcon.textContent = "content_copy";
+
+          let downloadImage = document.createElement('a');
+          downloadImage.setAttribute('href', url);
+          downloadImage.setAttribute('target', 'blank');
+          downloadImage.setAttribute('download',images.name.slice(14,));
+
+          let updateContent = document.createElement('input');
+          updateContent.setAttribute('type', 'text');
+          updateContent.setAttribute('id',url+'1');
+          updateContent.setAttribute('style', 'display:none;');
+          updateContent.setAttribute('placeholder','Enter the caption here...');
+          let updateContentButton = document.createElement('button');
+          updateContentButton.setAttribute('type', 'button');
+          updateContentButton.setAttribute('class', 'updateButton btn');
+          updateContentButton.setAttribute('style', 'display:none;');
+          updateContentButton.textContent = "Update";
+          
+          li.setAttribute('data-id', url);
+          li.setAttribute('class', 'row');
+          li.setAttribute('style', 'border:1px solid #BABBC2;box-shadow: 3px 6px 5px 6px #888888;margin-bottom:20px;min-width:680px;');
+          editTools.setAttribute('class', 'col');
+          editTools.setAttribute('style', 'background-color:#F4F5F9;width:100%;height:25px;');
+          userProfile.setAttribute('class', "col l8 s8 circle");
+          userProfile.setAttribute('src', "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png");
+          userProfile.setAttribute('style', "width:50px;");
+          //userName.setAttribute('class', 'col l10 s10');
+          userName.setAttribute('style','font-weight:bold;');
+          dates.setAttribute('class', 'col l12 s12');
+          dates.setAttribute('style', 'padding-left:25px;');
+          dates.setAttribute('style', 'font-size:10px;');
+          caption.setAttribute('class', 'row');
+          caption.setAttribute('style', 'padding:15px 20px 0px  20px;height:auto;text-align:justify;');
+          image.setAttribute('src',url);
+          image.setAttribute('onerror', "this.style.display='none'")
+          image.setAttribute('style','width:100%;height:auto;' );
+
+          var moreBtn = document.createElement('button');
+          moreBtn.textContent = "...See Less";
+         // moreBtn.setAttribute("style","float:right;");
+      
+          db.collection('/Depression forum posts/').doc(images.name).get().then(doc => {
+            userName.textContent = doc.data().name;
+              caption.textContent = doc.data().content; 
+              dates.textContent = doc.data().date;
+              if(doc.data().content.length >=100){
+                //caption.appendChild(moreBtn);
+              }
+              
+          });
+
+
+     //name.appendChild(image);
+     editContent.appendChild(editIcon);
+     cross.appendChild(deleteIcon);
+     share.appendChild(shareIcon);
+     copyLink.appendChild(linkIcon);
+     
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+     if(isMobile){
+        editTools.appendChild(share);
+     } 
+     else{
+       editTools.appendChild(copyLink);
+     }
+     
+      db.collection('/Depression forum posts/').doc(images.name).get().then(doc => { 
+           if(doc.data().email == window.userIs.email){
+             editTools.appendChild(editContent);
+             editTools.appendChild(cross);
+             editTools.appendChild(updateContent);
+             editTools.appendChild(updateContentButton);
+              
+           }
+      });
+     
+     li.appendChild(editTools);
+     
+     li.appendChild(userProfile);
+     li.appendChild(userName);
+     li.appendChild(dates);
+     
+     
+     //li.appendChild(cross);
+     //li.appendChild(dropDownDiv);
+     //li.appendChild(dropDown);
+     //li.appendChild(dropList);
+     li.appendChild(caption);
+      downloadImage.appendChild(image);
+    li.appendChild(downloadImage);
+    guideList.appendChild(li);
+
+         // deleting data
+    cross.addEventListener('click', (e) => {
+        e.stopPropagation();
+        var sure = confirm("Are you sure to delete this data?");
+        if(sure){
+         db.collection('/Depression forum posts/').doc(images.name).get().then(doc => { 
+           if(doc.data().email == window.userIs.email){
+              db.collection('/Depression forum posts/').doc(images.name).delete();
+              storageRef.child('/Depression forum/'+images.parent.name+'/'+images.name).delete(); 
+              showImages("");
+           } 
+           else{
+              M.toast({html: 'You cannot delete this post since you are not the author of this post'});
+          }
+          });
+        }
+        
+    });
+    var count = 0;
+    editContent.addEventListener('click', (e) => {
+        count+=1;
+        if(count %2 ==1){
+        e.stopPropagation();
+            editTools.setAttribute('style', 'background-color:#F4F5F9;width:100%;height:120px;');
+            updateContent.setAttribute('style', 'display:inline-block;background-color:white; border:1px solid #E3E6F3;border-radius:10px;');
+            updateContentButton.setAttribute('style', 'display:block;float:right;');
+        }
+        else{
+          editTools.setAttribute('style', 'background-color:#F4F5F9;width:100%;height:25px;');
+            updateContent.setAttribute('style', 'display:none;');
+            updateContentButton.setAttribute('style', 'display:none;');
+        }
+    });
+    updateContentButton.addEventListener('click', (e1) => {
+          var con = document.getElementById(url+'1').value;
+       if(con.trim().length >0){
+          db.collection('/Depression forum posts/').doc(images.name).update({
+              content: con
+          }).then(() => {
+            showImages(document.getElementById('categoryList').value);
+            console.log(con);
+          }).catch(err => {
+             console.log(err.message);
+          });
+       }
+    });
+    share.addEventListener('click', event => {
+    if (navigator.share) {
+      navigator.share({
+         title: images.name.slice(14,),
+         url: url
+      }).then(() => {
+          //console.log('Thanks for sharing!');
+       })
+         .catch(console.error);
+    } else {
+    // fallback
+  }
+});
+moreBtn.addEventListener('click', event => {
+  caption.textContent = caption.textContent.slice(0,100);
+  caption.setAttribute('style', 'padding:15px 10px 0px  20px;height:25px;');
+  moreBtn.style.display = "none";
+});
+copyLink.addEventListener('click', event => {
+  var text = url;
+   navigator.clipboard.writeText(text).then(function() {
+     M.toast({html: 'Image link is copied to clipboard.', displayLength: 2000});
+  }, function(err) {
+      console.error('Async: Could not copy text: ', err);
+  });
+});
+      
+  }); 
+  
+    }
+
+  </script>
+
+<script>
+  function sendEmail(){
+    var user = firebase.auth().currentUser;
+
+      user.sendEmailVerification().then(function() {
+       // Email sent.
+       alert("Verification email sent to "+user.email);
+       }).catch(function(error) {
+        // An error happened.
+        alert("A verification email is already sent to"+user.email);
+      });
+      document.querySelector('.confirmMail').innerHTML ='<p style="padding:15px 0px 0px 10px ;">A confirmation email is sent to the registered email. After verifying, click <a href="#" onclick="refreshPage();"> here </a>to access your account</p>';
+      confirmMails.setAttribute('style' , "background-color:#1BF793; height:15%; width:95%;" )
+  }
+  function refreshPage(){
+    location.reload();
+  }
+
+function logouts(){
+    //e.preventDefault();
+    selectValues={};
+    document.getElementById('categoryList').options.length=2; // clear the previous user's data in Category dropdown
+    document.getElementById('categoryList11').options.length=2;
+    auth.signOut();
+        
+  }
+
+		
+	</script>
+  
+  <footer class="page-footer" style="background-color:#999999" id="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Designed By-</h5>
+                <p class="grey-text text-lighten-4">DEPRESSION DETECTION TEAM</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Connect with us</h5>
+                <ul>
+                  <li class="row"><a class="facebook btn-floating btn-small indigo" href="#!"  ><i class="fab fa-facebook"></i></a> <a href="#!"  ><span id="socialMedia">Facebook</span></a></li>
+                  <li class="row"><a class="instagram  btn-floating btn-small indigo " href="#!" ><i class="fab fa-instagram"></i></a> <a href="#!" ><span id="socialMedia">Instagram</span></a></li>
+                  <li class="row" ><a class="twitter  btn-floating btn-small indigo " href="#!" ><i class="fab fa-twitter"></i></a> <a href="#!"><span id="socialMedia">Twitter</span></a></li>
+                  <li class="row" ><a class="twitter  btn-floating btn-small indigo " href="#!" ><i class="fab fa-youtube"></i></a> <a href="#!"><span id="socialMedia">Youtube</span></a></li>
+                </ul>
+              </div>
+            </div>
+            © 2020 All rights reserved.
+          </div>
+  
+        </footer>
+
+</body>
+</html>

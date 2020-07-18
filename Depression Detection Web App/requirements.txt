@@ -1,0 +1,9 @@
+flask
+numpy
+csv
+pickle
+tensorflow
+keras
+speech_recognition
+googletrans
+pytesseract

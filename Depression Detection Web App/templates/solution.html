@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Depression Test Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ 
+</head>
+
+<body>
+    <form action="http://127.0.0.1:5000/">
+        <center style="padding-left:60px;"><button type="submit" style="width:90px;" class="btn btn-primary btn-block btn-large">Go Back</button></center>
+    </form>
+    
+    <center style="padding-left:80px;"> <audio style="padding-top:10px;padding-bottom:16px;" controls="controls" autoplay="autoplay" src="/static/music/Depression_Removal.mp3"></audio></center>
+    <div class="login"  style="background-color:#098DCA;min-height:80%;height:auto; ">
+    	<h1>Predicted Solution</h1>
+        {{soln}}
+        <br>
+        <br>
+        <br>
+        
+        <hr>
+        <a style="color:#fdeaaa;padding-left:10px;text-decoration:none;" href="{{url_for('google_translator')}}" target="_blank"><b>{{languag}}</b></a>
+        <hr>
+        
+        <br>
+        <br>
+    
+        <a style="color:#fde50d;padding-left:10px;text-decoration:none;" href="{{url_for('webpage')}}" target="_blank"><b>Not satisfied? Click here to explore more.</b></a>
+       <br>
+       <br>
+       <a style="color:#F5CBA7 ;padding-left:10px;text-decoration:none;" href="{{url_for('webForamTeam')}}" target="_blank"><b>Join the forum to connect with others.</b></a>
+       <br>
+       <br>
+    </div>
+
+    <!--<footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white" style="color:white;font-size:12px;padding-left:930px;padding-top:470px">Copyright © 2020 Depression Detect - All rights reserved</p>
+        </div>
+    </footer>-->
+    
+</body>
+</html>

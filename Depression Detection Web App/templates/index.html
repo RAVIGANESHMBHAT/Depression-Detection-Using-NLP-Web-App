@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>Depression Test Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+  
+</head>
+
+<body >
+    <div style="background-color:#098DCA;">
+        <form action="http://127.0.0.1:5000/">
+            <center><button type="submit" style="width:90px;" class="btn btn-primary btn-block btn-large">Go Back</button></center>
+        </form>
+        <h2 style = "font-family:georgia,garamond,serif;font-size:25px;font-style:italic;padding-bottom:10px;">Come... Let's seek the depression status</h2>
+    </div>
+    
+    <div class="login" style="padding-top:100px;height:100%;">      
+       {{ prediction_text }}
+       <br>
+       <br>
+       {{ prediction_text1 }}  
+       <br>
+       <br>
+       <img src={{emoji}} style="width:250px;">  
+    </div>
+    
+    <!--<footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white" style="color:white;font-size:14px;padding-left:870px;padding-top:190px">Copyright © 2020 Depression Detect - All rights reserved</p>
+      </div>
+    </footer>-->
+    
+</body>
+</html>

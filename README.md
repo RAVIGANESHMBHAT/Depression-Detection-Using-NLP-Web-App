@@ -26,12 +26,15 @@ The data collection is done from the Kaggle website. The “Sentiment Analysis D
 A front-end for the user is provided as a website. The user is allowed to input the posts in the form of text, voice or image. The user input is fed into the ML model and it will predict whether the depression is present in the user inputted text or not. The result will be displayed on a new page of the website.
 Getting Started
 To get started, you'll want to first clone the GitHub repository locally or if you have project file, that’s fine.
+
 $ git clone https://github.com/RAVIGANESHMBHAT/Depression-Detection-Using-NLP-Web-App.git
 
 Next, you'll want to go into the sample app directory:
+
 $ cd Depression-Detection-Using-NLP-Web-App/Depression Detection Web App
 
 Then you'll want to install all of the Python requirements (via pip):
+
 $ pip install -r requirements.txt
 
 Note: Search online for the installation of pytesseract OCR which requires some additional steps. ( You can refer this video  https://www.youtube.com/watch?v=RewxjHw8310  )
@@ -40,4 +43,5 @@ Download the tokenizer.pkl, w2v_model2.pkl, model_depression.h5 files from the b
 (link to google drive) 
 
 And lastly, you'll want to run the app.py script which will guide you the rest of the way:
+
 $ python app.py
